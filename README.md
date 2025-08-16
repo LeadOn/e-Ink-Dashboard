@@ -1,7 +1,3 @@
-<p align="center">
-    <img src="./images/gameon-logo.png" width="128" />
-</p>
-
 <h1 align="center">e-Ink Dashboard</h1>
 
 <p align="center"><img src="./images/Logo_e-ink_Dashboard.png" height="400" alt="LeaderOS's logo" /></p>
