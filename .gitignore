@@ -124,6 +124,7 @@ docs/_build/
 # PyBuilder
 .pybuilder/
 target/
+ev-dashboard/lib/python3.11/
 
 # Jupyter Notebook
 .ipynb_checkpoints

@@ -27,7 +27,7 @@ def haHomeScreen():
     syncTime = None
 
     while True:
-        if syncTime is None or syncTime + timedelta(seconds=10) < datetime.now():
+        if syncTime is None or syncTime + timedelta(minutes=30) < datetime.now():
             logging.info("Displaying Home Assistant screen...")
             setLedColors(GPIO.HIGH, GPIO.LOW, GPIO.LOW)
             screenInit(True, False, False)
