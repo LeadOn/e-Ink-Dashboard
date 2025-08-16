@@ -3,16 +3,10 @@
 import sys
 import os
 
-picdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'pic')
-libdir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), 'lib')
-
-if os.path.exists(libdir):
-    sys.path.append(libdir)
-
 import logging
 import time
 import requests
-import epd2in13_V4
+from waveshare_epd import epd2in13_V4
 from PIL import Image,ImageDraw,ImageFont
 import RPi.GPIO as GPIO
 
@@ -24,10 +18,11 @@ CLEAR_SCREEN_BTN = 26
 API_BTN = 16
 DHT_11 = 19
 
+
 # Defining e-ink screen stuff
 epd = epd2in13_V4.EPD()
-font15 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 15)
-font24 = ImageFont.truetype(os.path.join(picdir, 'Font.ttc'), 24)
+font15 = ImageFont.truetype('./pic/Font.ttc', 15)
+font24 = ImageFont.truetype('./pic/Font.ttc', 24)
 isSleeping = False
 image = Image.new('1', (epd.height, epd.width), 255)  # 255: clear the frame 
 
